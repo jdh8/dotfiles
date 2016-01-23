@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/jdh8/src/jdh8.github.io/_layouts'
+let g:netrw_dirhist_2='/home/jdh8/.telegram-cli/downloads'
+let g:netrw_dirhist_3='/home/jdh8/.config/plasma-workspace'
+let g:netrw_dirhist_4='/var/www/html/wp-content/plugins/integration/Liquid/Tag'
+let g:netrw_dirhist_5='/home/jdh8/.vim/ftplugin'
+let g:netrw_dirhist_6='/home/jdh8/src/blackjack'
+let g:netrw_dirhist_7='/var/www/jdh8.github.io/tools'
+let g:netrw_dirhist_8='/home/jdh8/src/paper-presentations/10.1161/JAHA.113.000270'
+let g:netrw_dirhist_9='/home/jdh8/src'
