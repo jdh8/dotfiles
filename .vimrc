@@ -1,3 +1,6 @@
+filetype plugin on
+syntax on
+
 set autoindent
 set expandtab
 set formatoptions+=m
