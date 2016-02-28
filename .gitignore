@@ -1,2 +1,5 @@
+# systemd
+*.target.wants/
+
 # vim
 .netrwhist

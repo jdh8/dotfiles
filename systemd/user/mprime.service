@@ -1,0 +1,10 @@
+[Unit]
+Description=Great Internet Mersenne Prime Search
+
+[Service]
+Type=simple
+ExecStart=/home/jdh8/build/p95v285.linux64/mprime -d
+WorkingDirectory=/home/jdh8/build/p95v285.linux64
+
+[Install]
+WantedBy=default.target
