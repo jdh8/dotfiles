@@ -5,6 +5,7 @@ set autoindent
 set backspace=indent,eol,start
 set expandtab
 set formatoptions+=m
+set hlsearch
 set modeline
 set mouse=a
 set ruler
