@@ -2,6 +2,7 @@ filetype plugin on
 syntax on
 
 set autoindent
+set backspace=indent,eol,start
 set expandtab
 set formatoptions+=m
 set modeline
