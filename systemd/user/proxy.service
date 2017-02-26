@@ -1,0 +1,9 @@
+[Unit]
+Description=Proxy to circumvent Internet censorship of Amo
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ssh -C2qTnNL 3128:localhost:3128 sana@civics.tmu.edu.tw
+
+[Install]
+WantedBy=default.target
