@@ -8,8 +8,10 @@ if [ "$*" ]; then
               -o -name \*.html \
               -o -name \*.txt  \
               -o -name \*.svg  \
-        \) -size +1000c -exec pigz -9k '{}' +
+              -o -name \*.ico  \
+              -o -name \*.atom \
+        \) -size +500c -exec pigz -9k '{}' +
 else
     echo "Usage: $0 filenames..."
-    echo 'Recursively pigz static pages over 1000 bytes.'
+    echo 'Recursively pigz static pages over 500 bytes.'
 fi
