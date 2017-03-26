@@ -10,6 +10,8 @@ if [ "$*" ]; then
               -o -name \*.svg  \
               -o -name \*.ico  \
               -o -name \*.atom \
+              -o -name LICENSE\* \
+              -o -name COPYING\* \
         \) -size +500c -exec pigz -9k '{}' +
 else
     echo "Usage: $0 filenames..."
