@@ -10,6 +10,8 @@ if [ "$*" ]; then
               -o -name \*.svg  \
               -o -name \*.ico  \
               -o -name \*.atom \
+              -o -name \*.xml  \
+              -o -name \*.xsl  \
               -o -name LICENSE\* \
               -o -name COPYING\* \
         \) -size +500c -exec pigz -9k '{}' +
