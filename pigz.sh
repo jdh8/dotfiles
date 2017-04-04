@@ -12,6 +12,8 @@ if [ "$*" ]; then
               -o -name \*.atom \
               -o -name \*.xml  \
               -o -name \*.xsl  \
+              -o -name \*.otf  \
+              -o -name \*.ttf  \
               -o -name LICENSE\* \
               -o -name COPYING\* \
         \) -size +500c -exec pigz -9k '{}' +
