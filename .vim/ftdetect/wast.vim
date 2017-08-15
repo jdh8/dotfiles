@@ -1,0 +1,1 @@
+../../vim-wasm/ftdetect/wast.vim

@@ -4,3 +4,6 @@
 [submodule "typescript-vim"]
 	path = typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim-wasm"]
+	path = vim-wasm
+	url = https://github.com/rhysd/vim-wasm.git
