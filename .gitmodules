@@ -1,3 +1,6 @@
 [submodule "metamath.vim"]
 	path = metamath.vim
 	url = https://github.com/marnix/metamath.vim.git
+[submodule "typescript-vim"]
+	path = typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
