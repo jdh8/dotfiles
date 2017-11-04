@@ -1,0 +1,1 @@
+../../julia-vim/ftplugin/julia.vim

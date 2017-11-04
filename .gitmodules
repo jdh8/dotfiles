@@ -7,3 +7,6 @@
 [submodule "vim-wasm"]
 	path = vim-wasm
 	url = https://github.com/rhysd/vim-wasm.git
+[submodule "julia-vim"]
+	path = julia-vim
+	url = https://github.com/JuliaEditorSupport/julia-vim.git

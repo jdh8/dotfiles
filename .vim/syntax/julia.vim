@@ -1,0 +1,1 @@
+../../julia-vim/syntax/julia.vim
