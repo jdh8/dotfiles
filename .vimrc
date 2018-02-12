@@ -5,6 +5,7 @@ set autoindent
 set backspace=indent,eol,start
 set expandtab
 set formatoptions+=m
+set incsearch
 set hlsearch
 set matchpairs+=<:>
 set modeline
