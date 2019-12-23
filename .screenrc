@@ -1,1 +1,1 @@
-caption always "%{= kw}%-w%{= gW}%n %t%{-}%+w"
+caption always "%{= kw}%-w%{= gk}%n %t%{-}%+w"
