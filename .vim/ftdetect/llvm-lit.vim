@@ -1,0 +1,1 @@
+../../vim-llvm/ftdetect/llvm-lit.vim

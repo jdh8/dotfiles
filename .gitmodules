@@ -10,3 +10,6 @@
 [submodule "julia-vim"]
 	path = julia-vim
 	url = https://github.com/JuliaEditorSupport/julia-vim.git
+[submodule "vim-llvm"]
+	path = vim-llvm
+	url = https://github.com/rhysd/vim-llvm.git
