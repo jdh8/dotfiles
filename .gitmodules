@@ -1,18 +1,23 @@
 [submodule "metamath.vim"]
 	path = metamath.vim
 	url = https://github.com/marnix/metamath.vim.git
+        branch = master
 [submodule "typescript-vim"]
 	path = typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+        branch = master
 [submodule "vim-wasm"]
 	path = vim-wasm
 	url = https://github.com/rhysd/vim-wasm.git
+        branch = master
 [submodule "julia-vim"]
 	path = julia-vim
 	url = https://github.com/JuliaEditorSupport/julia-vim.git
+        branch = master
 [submodule "vim-llvm"]
 	path = vim-llvm
 	url = https://github.com/rhysd/vim-llvm.git
+        branch = master
 [submodule ".vim/pack/github/start/copilot.vim"]
 	path = .vim/pack/github/start/copilot.vim
 	url = https://github.com/github/copilot.vim.git
