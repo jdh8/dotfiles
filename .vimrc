@@ -16,3 +16,7 @@ set softtabstop=4
 set guifont=DejaVu\ Sans\ Mono\ 11
 
 au BufRead,BufNewFile *.phps set ft=php
+
+let g:copilot_filetypes = {
+    \ '*': v:true,
+    \ }
