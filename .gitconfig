@@ -1,0 +1,7 @@
+[user]
+	name = Chen-Pang He
+	email = chen.pang.he@jdh8.org
+[pull]
+	ff = only
+[init]
+	defaultBranch = main
