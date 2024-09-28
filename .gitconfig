@@ -1,7 +1,16 @@
 [user]
 	name = Chen-Pang He
 	email = chen.pang.he@jdh8.org
+	signingkey = /home/jdh8/.ssh/id_ed25519.pub
 [pull]
 	ff = only
 [init]
 	defaultBranch = main
+[core]
+	editor = vim
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[rebase]
+	autoStash = true
