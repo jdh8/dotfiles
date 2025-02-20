@@ -1,0 +1,11 @@
+[Unit]
+Description=Shoginet - Distributed network for lishogi.org
+
+[Service]
+WorkingDirectory=/home/jdh8/src/shoginet
+ExecStart=/usr/bin/python3 shoginet.py
+KillSignal=SIGINT
+Nice=5
+
+[Install]
+WantedBy=default.target
