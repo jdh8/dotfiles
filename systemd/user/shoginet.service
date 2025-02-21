@@ -5,6 +5,7 @@ Description=Shoginet - Distributed network for lishogi.org
 WorkingDirectory=/home/jdh8/src/shoginet
 ExecStart=/usr/bin/python3 shoginet.py
 Nice=5
+Restart=always
 
 [Install]
 WantedBy=default.target
