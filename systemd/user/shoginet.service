@@ -4,6 +4,9 @@ Description=Shoginet - Distributed network for lishogi.org
 [Service]
 WorkingDirectory=/home/jdh8/src/shoginet
 ExecStart=/usr/bin/python3 shoginet.py --auto-update
+PrivateTmp=true
+DevicePolicy=closed
+ProtectSystem=full
 Nice=5
 Restart=always
 

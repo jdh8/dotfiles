@@ -1,0 +1,14 @@
+[Unit]
+Description=Fishnet client
+
+[Service]
+WorkingDirectory=/home/jdh8/src/fishnet
+ExecStart=/home/jdh8/src/fishnet/target/release/fishnet
+PrivateTmp=true
+DevicePolicy=closed
+ProtectSystem=full
+Nice=5
+Restart=always
+
+[Install]
+WantedBy=default.target
