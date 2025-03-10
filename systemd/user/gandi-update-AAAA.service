@@ -1,0 +1,7 @@
+[Unit]
+Description=Update AAAA records at gandi.net
+Wants=gandi-update-AAAA.timer
+
+[Service]
+WorkingDirectory=/srv/var/gandi
+ExecStart=/srv/var/gandi/target/release/gandi-ipv6-updater

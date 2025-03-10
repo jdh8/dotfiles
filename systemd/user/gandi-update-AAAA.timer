@@ -1,0 +1,10 @@
+[Unit]
+Description=Run gandi-update-AAAA every 3 hours
+Requires=gandi-update-AAAA.service
+
+[Timer]
+Unit=gandi-update-AAAA.service
+OnUnitInactiveSec=3h
+
+[Install]
+WantedBy=timers.target
