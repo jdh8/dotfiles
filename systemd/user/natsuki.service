@@ -1,0 +1,14 @@
+[Unit]
+Description=Natsuki, a Discord bot
+
+[Service]
+WorkingDirectory=/srv/var/jdh8/src/natsuki
+EnvironmentFile=/srv/var/jdh8/src/natsuki/.env.prod
+ExecStart=/srv/var/jdh8/src/natsuki/target/release/natsuki
+PrivateTmp=true
+DevicePolicy=closed
+ProtectSystem=full
+Restart=always
+
+[Install]
+WantedBy=default.target
