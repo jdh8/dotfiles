@@ -3,9 +3,8 @@ Description=Continuous mdbook build %i
 
 [Service]
 WorkingDirectory=/home/jdh8/src/%i
-ExecStartPre=/usr/bin/env mdbook build
-ExecStart=/usr/bin/env mdbook watch
-SyslogIdentifier=mdbook
+ExecStartPre=/home/jdh8/bin/mdbook build
+ExecStart=/home/jdh8/bin/mdbook watch
 DevicePolicy=closed
 ProtectSystem=full
 Nice=5
