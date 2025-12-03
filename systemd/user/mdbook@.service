@@ -1,10 +1,11 @@
 [Unit]
-Description=Continuously build mdbook at %i
+Description=Continuous mdbook build %i
 
 [Service]
 WorkingDirectory=/home/jdh8/src/%i
-ExecStartPre=/srv/var/jdh8/Cargo/bin/mdbook build
-ExecStart=/srv/var/jdh8/Cargo/bin/mdbook watch
+ExecStartPre=/usr/bin/env mdbook build
+ExecStart=/usr/bin/env mdbook watch
+SyslogIdentifier=mdbook
 DevicePolicy=closed
 ProtectSystem=full
 Nice=5
