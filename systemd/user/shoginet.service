@@ -3,7 +3,7 @@ Description=Shoginet - Distributed network for lishogi.org
 
 [Service]
 WorkingDirectory=/home/jdh8/src/shoginet
-ExecStart=/usr/bin/python3 shoginet.py --auto-update
+ExecStart=/usr/bin/node node_modules/.bin/tsx src/main.ts
 PrivateTmp=true
 DevicePolicy=closed
 ProtectSystem=full
