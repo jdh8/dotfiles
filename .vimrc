@@ -1,5 +1,6 @@
 filetype plugin on
 syntax on
+colorscheme evening
 
 set autoindent
 set backspace=indent,eol,start
