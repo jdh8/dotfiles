@@ -14,3 +14,7 @@
 	gpgsign = true
 [rebase]
 	autoStash = true
+[credential]
+	helper = store
+[push]
+	useForceIfIncludes = true
