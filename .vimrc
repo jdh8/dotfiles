@@ -1,9 +1,7 @@
 call plug#begin()
+Plug 'ayu-theme/ayu-vim'
 Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
-
-filetype plugin on
-syntax on
 
 set autoindent
 set backspace=indent,eol,start
@@ -19,6 +17,9 @@ set shiftwidth=4
 set softtabstop=4
 set termguicolors
 set guifont=DejaVu\ Sans\ Mono\ 11
+
+let ayucolor="dark"
+colorscheme ayu
 
 au BufRead,BufNewFile *.phps set ft=php
 

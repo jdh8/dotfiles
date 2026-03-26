@@ -22,3 +22,7 @@
 	path = .vim/pack/github/start/copilot.vim
 	url = https://github.com/github/copilot.vim.git
         branch = release
+[submodule ".vim/plugged/ayu-vim"]
+	path = .vim/plugged/ayu-vim
+	url = https://github.com/ayu-theme/ayu-vim.git
+        branch = master
