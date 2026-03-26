@@ -1,3 +1,7 @@
+call plug#begin()
+Plug 'JuliaEditorSupport/julia-vim'
+call plug#end()
+
 filetype plugin on
 syntax on
 
