@@ -1,6 +1,5 @@
 filetype plugin on
 syntax on
-colorscheme evening
 
 set autoindent
 set backspace=indent,eol,start
@@ -14,6 +13,7 @@ set mouse=a
 set ruler
 set shiftwidth=4
 set softtabstop=4
+set termguicolors
 set guifont=DejaVu\ Sans\ Mono\ 11
 
 au BufRead,BufNewFile *.phps set ft=php
