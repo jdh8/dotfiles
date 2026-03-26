@@ -1,1 +1,0 @@
-../../vim-wasm/syntax/wast.vim

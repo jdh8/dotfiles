@@ -1,6 +1,10 @@
 call plug#begin()
-Plug 'ayu-theme/ayu-vim'
 Plug 'JuliaEditorSupport/julia-vim'
+Plug 'ayu-theme/ayu-vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'marnix/metamath.vim'
+Plug 'rhysd/vim-llvm'
+Plug 'rhysd/vim-wasm'
 call plug#end()
 
 set autoindent
