@@ -7,7 +7,12 @@ ExecStart=/home/jdh8/src/fishnet/target/release/fishnet
 PrivateTmp=true
 DevicePolicy=closed
 ProtectSystem=full
-Nice=5
+# Idle class: runs only on otherwise-free cores and yields the instant a normal-
+# priority task wakes. Same policy as ../pons/scripts/idle-run.sh, expressed
+# natively. Nice sits below idle-run (Nice=10) but is cosmetic under SCHED_IDLE.
+Nice=15
+CPUSchedulingPolicy=idle
+IOSchedulingClass=idle
 Restart=always
 
 [Install]

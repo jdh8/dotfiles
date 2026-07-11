@@ -7,7 +7,12 @@ ExecStart=/usr/bin/node node_modules/.bin/tsx src/main.ts
 PrivateTmp=true
 DevicePolicy=closed
 ProtectSystem=full
-Nice=5
+# Idle class: runs only on otherwise-free cores and yields the instant a normal-
+# priority task wakes. Same policy as ../pons/scripts/idle-run.sh, expressed
+# natively; inherited by the YaneuraOu engine subprocess. Nice is cosmetic here.
+Nice=15
+CPUSchedulingPolicy=idle
+IOSchedulingClass=idle
 Restart=always
 
 [Install]
