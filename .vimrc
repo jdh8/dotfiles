@@ -22,7 +22,7 @@ set softtabstop=4
 set termguicolors
 set guifont=DejaVu\ Sans\ Mono\ 11
 
-let ayucolor="mirage"
+let ayucolor="light"
 colorscheme ayu
 
 au BufRead,BufNewFile *.phps set ft=php
