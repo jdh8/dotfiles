@@ -38,7 +38,10 @@ function! s:AyuFollowTerm() abort
         redraw!
     endif
 endfunction
-au TermResponseAll background call s:AyuFollowTerm()
+
+if exists('##TermResponseAll')
+    au TermResponseAll background call s:AyuFollowTerm()
+endif
 
 au BufRead,BufNewFile *.phps set ft=php
 
