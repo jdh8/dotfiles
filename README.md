@@ -8,4 +8,6 @@ Claude Code
 ln -s ~/src/dotfiles/CLAUDE.md ~/.claude/CLAUDE.md
 mkdir -p ~/.claude/skills
 for s in ~/src/dotfiles/skills/*/; do ln -s "${s%/}" ~/.claude/skills/; done
+mkdir -p ~/.codex/skills
+for s in ~/src/dotfiles/skills/*/; do ln -s "${s%/}" ~/.codex/skills/; done
 ```
