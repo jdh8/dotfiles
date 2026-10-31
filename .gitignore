@@ -3,3 +3,8 @@
 
 # vim
 .netrwhist
+
+# project-owned units: the canonical copy lives in that project's scripts/; drop-ins are per-box
+systemd/user/gib-*
+systemd/user/poker-*
+systemd/user/pons-*
