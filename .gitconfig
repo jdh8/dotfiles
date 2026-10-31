@@ -1,7 +1,7 @@
 [user]
 	name = Chen-Pang He
 	email = chen.pang.he@jdh8.org
-	signingkey = /home/jdh8/.ssh/id_ed25519.pub
+	signingkey = DA6413AA253CE11D49F3F0C96AE70D4CF2A5DA88
 [pull]
 	ff = only
 [init]
@@ -9,7 +9,7 @@
 [core]
 	editor = vim
 [gpg]
-	format = ssh
+	format = openpgp
 [commit]
 	gpgsign = true
 [rebase]
