@@ -12,6 +12,12 @@ host after switching computers (or after a tunnel disconnects):
 ~/src/dotfiles/gpg-takeover.sh dl02.skymizer.com
 ```
 
+Tab-complete SSH hosts for it in bash:
+
+```sh
+ln -s ~/src/dotfiles/bash-completion/gpg-takeover.sh.bash ~/.local/share/bash-completion/completions/
+```
+
 ## Claude Code
 
 ```sh
