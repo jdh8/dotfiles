@@ -40,8 +40,8 @@ else
     socket="$HOME/.gnupg/S.gpg-agent"
 fi
 case "$socket" in
-    /*/S.gpg-agent) ;;
-    *) echo "Unexpected remote GPG socket: $socket" >&2; exit 1 ;;
+    (/*/S.gpg-agent) ;;
+    (*) echo "Unexpected remote GPG socket: $socket" >&2; exit 1 ;;
 esac
 mkdir -p "${socket%/*}"
 if [ -e "$socket" ] || [ -L "$socket" ]; then
