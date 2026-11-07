@@ -18,3 +18,5 @@
 	helper = store
 [push]
 	useForceIfIncludes = true
+[include]
+	path = ~/.gitconfig.local
