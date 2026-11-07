@@ -1,9 +1,31 @@
 #!/bin/sh
 # Run on the computer holding the YubiKey, with one remote SSH host as argument.
+# With no argument, the key is in this computer: stop every forward in or out
+# of it and use the local agent.
 set -eu
 
+if [ "$#" -eq 0 ]; then
+    for control in "$HOME"/.ssh/gpg-forward-*; do
+        [ -S "$control" ] || continue
+        ssh -F /dev/null -S "$control" -O exit localhost 2>/dev/null || :
+    done
+    # An inbound forward is an sshd-session of ours that runs nothing; sshd
+    # unlinks its socket path on close, so kill the session, never rm the
+    # socket, or it later takes the local agent's socket with it.
+    # ponytail: "no children" is the heuristic; a session that is only
+    # forwarding has none, a shell or editor session has some.
+    for pid in $(pgrep -u "$(id -u)" -x sshd-session); do
+        if ! pgrep -P "$pid" >/dev/null; then
+            kill "$pid" && echo "Closed forwarding session $pid"
+        fi
+    done
+    sleep 1
+    gpgconf --launch gpg-agent
+    gpg --card-status | grep -E '^(Reader|Serial number|Signature key)'
+    exit 0
+fi
 if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 [user@]host" >&2
+    echo "Usage: $0 [[user@]host]" >&2
     exit 2
 fi
 host=$1
