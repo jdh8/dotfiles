@@ -95,5 +95,6 @@ ssh -F /dev/null -S "$control" -O forward \
 trap - 0 HUP INT TERM
 printf 'GPG forwarding: %s:%s -> %s\n' "$host" "$remote_socket" "$local_socket"
 # After the trap reset: a host without git keeps its forwarding.
-ssh -T -S "$control" -o ClearAllForwardings=yes "$host" \
-    git config --file .gitconfig.local user.signingkey "$key"
+# The remote gpg cannot sign with a key whose public half it has never seen.
+gpg --export "$key" | ssh -T -S "$control" -o ClearAllForwardings=yes "$host" \
+    "gpg --quiet --import && git config --file .gitconfig.local user.signingkey $key"
