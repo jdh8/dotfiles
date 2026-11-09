@@ -21,6 +21,10 @@ socket down with) and starts the local agent on the card.
 ~/src/dotfiles/gpg-takeover.sh
 ```
 
+Either way it writes the card's signature key as `user.signingkey` to
+`~/.gitconfig.local` on this computer and on the remote host, so git signs
+with whichever YubiKey is plugged in.
+
 Tab-complete SSH hosts for it in bash:
 
 ```sh

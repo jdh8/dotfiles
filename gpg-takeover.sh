@@ -4,6 +4,16 @@
 # of it and use the local agent.
 set -eu
 
+# Both YubiKeys carry the same uid, so git must name the key that is plugged
+# in: write the card's signature key to ~/.gitconfig.local wherever git signs.
+card_key() {
+    key=$(gpg --card-status --with-colons | awk -F: '$1 == "fpr" { print $2; exit }')
+    case "$key" in
+        ''|*[!0-9A-F]*) echo "No signature key on the card." >&2; exit 1 ;;
+    esac
+    git config --file "$HOME/.gitconfig.local" user.signingkey "$key"
+}
+
 if [ "$#" -eq 0 ]; then
     for control in "$HOME"/.ssh/gpg-forward-*; do
         [ -S "$control" ] || continue
@@ -21,6 +31,7 @@ if [ "$#" -eq 0 ]; then
     done
     sleep 1
     gpgconf --launch gpg-agent
+    card_key
     gpg --card-status | grep -E '^(Reader|Serial number|Signature key)'
     exit 0
 fi
@@ -34,6 +45,7 @@ case "$host" in
 esac
 
 gpgconf --launch gpg-agent
+card_key
 local_socket=$(gpgconf --list-dirs agent-extra-socket)
 if [ ! -S "$local_socket" ]; then
     echo "GPG extra socket is unavailable: $local_socket" >&2
@@ -82,3 +94,6 @@ ssh -F /dev/null -S "$control" -O forward \
     -R "$remote_socket:$local_socket" "$host"
 trap - 0 HUP INT TERM
 printf 'GPG forwarding: %s:%s -> %s\n' "$host" "$remote_socket" "$local_socket"
+# After the trap reset: a host without git keeps its forwarding.
+ssh -T -S "$control" -o ClearAllForwardings=yes "$host" \
+    git config --file .gitconfig.local user.signingkey "$key"
