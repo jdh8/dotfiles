@@ -22,5 +22,5 @@ areas, say which skill is off before doing the work without it.
 - Recurring or scheduled runs, launching the app: loop, schedule, run
 - Claude API / Anthropic SDK: claude-api
 - Browsers, desktop control, artifact screenshots: anthropic-skills:{built-in-browser,chrome-browser,computer-use,artifact-emulator}
-- Research reports, morning brief, memory import: anthropic-skills:{deep-research,morning,import-memory}
+- Morning brief, memory import: anthropic-skills:{morning,import-memory}
 - Office/PDF/Google files: anthropic-skills:{docx,pptx,xlsx,pdf,google-workspace}
